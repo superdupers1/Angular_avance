@@ -1,0 +1,21 @@
+<div class="header">
+  <a class="fixed-top">
+
+    <div *ngIf="isLoggedIn; else loggedOut">
+      <button class="btn btn-primary" type="button" (click)="onLogoff()">LogOff</button>
+      <span class="text-white"> Bienvenido {{loggedUser?.name}} </span> 
+    </div>
+    <ng-template #loggedOut>
+      <button class="btn btn-primary" type="button" (click)="onLogin()">LogIn</button>
+      Por favor iniciar sesión      
+    </ng-template>
+
+  </a>
+  <div class="header-right">
+    <a style="cursor: pointer;" class="active" (click)="onHome()">Home</a>
+    <a style="cursor: pointer;" class="active" (click)="nosotros()" >Nosotros</a>
+    <a style="cursor: pointer;" class="active" (click)="skills()" >Skills</a>
+    <a style="cursor: pointer;" class="active" (click)="listado()" >Listado</a>
+  </div>
+</div>
+<router-outlet></router-outlet>

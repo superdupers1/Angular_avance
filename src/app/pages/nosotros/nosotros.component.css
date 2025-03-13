@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif; 
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center; 
+}
+
+#acerca-de-nosotros {
+    padding: 2rem;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+}
+
+.imagen {
+    flex: 1 1 300px; 
+    text-align: center; 
+}
+
+.imagen img {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 1rem; 
+}
+
+.texto {
+    flex: 2 1 400px; 
+    padding: 1rem;
+}
+
+#ver-mas {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#mision, #vision {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    margin-bottom: 1rem; /* Espacio entre secciones */
+}
+
+.us {
+    padding-top: 200px;
+}
+
+.aditional {
+    /* margin-top: -100px; */
+    padding-bottom: 100px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column; 
+    }
+    
+    .imagen {
+        margin-right: 0; 
+    }
+
+    .texto {
+        padding: 0; 
+    }
+
+    .us {
+        padding-top: 200px;
+    }
+}
+
+
+ @media (max-width: 530px) {
+    .us {
+        padding-top: 100px;
+    }
+} 

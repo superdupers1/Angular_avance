@@ -1,0 +1,30 @@
+table {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+thead {
+  background-color: #f0f0f0; 
+}
+
+thead th {
+  padding: 10px 15px; 
+  text-align: left; 
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+}
+
+tbody td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center; /* Centra el título en pantallas pequeñas */
+}

@@ -1,0 +1,71 @@
+
+
+section{
+    margin: 0;
+    height: 21vh;
+    background: linear-gradient(45deg, #8a817e, #969aa3, #23a6d5, #030325);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.chart-container {
+    height: 300px;
+  }
+  
+  #lineAndBarChart {
+    max-height: 300px;
+    max-width: 900px;
+    aspect-ratio: 0.6;
+  }
+
+  .catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    
+    .imagen-contenedor {
+    width: 200px; /* Ancho fijo para las imágenes */
+    margin: 10px; /* Espacio entre las imágenes */
+    overflow: hidden; /* Recorta las imágenes si se desbordan */
+    }
+    
+    .imagen-contenedor img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* La altura se ajusta proporcionalmente */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+    }
+    
+    .imagen-contenedor img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente la imagen al pasar el mouse */
+    }
+  
+
+
+
+
+
+
+
+
+

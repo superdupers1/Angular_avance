@@ -1,0 +1,39 @@
+
+<div class="parent"> 
+    <div class="container" [ngClass]="isSignDivVisiable ? 'active' :'' " id="container">
+        <div class="form-container sign-up" >
+            <form>
+                <h1>Crear Registro</h1>
+                
+                <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Name">
+                <input type="email" name="email" [(ngModel)]="signUpObj.email" placeholder="Email">
+                <input type="password" name="password"  [(ngModel)]="signUpObj.password" placeholder="Password">
+                <button (click)="onRegister()">Inscribirse</button>
+            </form>
+        </div>
+        <div class="form-container sign-in" >
+            <form [formGroup]="login" (ngSubmit)="onLogin()">
+                <h1>Iniciar sesión</h1>
+                <input type="email" formControlName="email" placeholder="Email">
+                <input type="password" formControlName="password" placeholder="Password">
+
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenido de nuevo!</h1>
+                    <p>Introduzca sus datos personales para utilizar todas las funciones del sitio</p>
+                    <button type="button" class="hidden" id="login" (click)="isSignDivVisiable = false">Iniciar sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Registro</h1>
+                    <p>Regístrese con sus datos personales para utilizar todas las funciones del sitio</p>
+                    <button type="button" class="hidden" id="register" (click)="isSignDivVisiable = true">Inscribirse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

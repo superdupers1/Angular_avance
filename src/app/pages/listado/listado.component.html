@@ -1,0 +1,26 @@
+<header>
+  <h2>Listado paginado</h2>
+</header>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Especie</th>
+      <th>Genero</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of paginatedData; track item.id) {
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.species }}</td>
+        <td>{{ item.gender }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+  <button (click)="paginaActual = paginaActual - 1; updatePaginatedData()" [disabled]="paginaActual === 1">Anterior</button>
+    <span>Pagina {{ paginaActual }}</span>
+    <button (click)="paginaActual = paginaActual + 1; updatePaginatedData()" [disabled]="paginaActual === 8">Siguiente</button>
